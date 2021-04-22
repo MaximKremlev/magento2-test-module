@@ -1,0 +1,16 @@
+<li class="customer-status" data-bind="scope: 'status'">
+    <span data-bind="text: status().current"></span>
+</li>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "status": {
+                    "component": "Icreative_Customer/js/status"
+                }
+            }
+        }
+    }
+}
+</script>

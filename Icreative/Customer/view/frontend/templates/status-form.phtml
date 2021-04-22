@@ -1,0 +1,28 @@
+<div class="customer-status-form">
+    <form class="form contact"
+          action="<?php echo $this->getFormAction(); ?>"
+          id="customer-status-form"
+          method="post"
+          data-hasrequired="<?php echo __('* Required Fields') ?>"
+          data-mage-init='{"validation":{}}'>
+
+        <fieldset class="fieldset">
+            <div class="field status required">
+                <label class="label" for="status"><span><?php echo __('Status') ?></span></label>
+                <div class="control">
+                    <input name="status" id="status" title="<?php echo __('Status') ?>" value="<?php echo $this->getCurrentStatus(); ?>" class="input-text" type="text"
+                           data-validate="{required:true}"/>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="form_key" value="<?php echo $this->getFormKey() ?>" />
+                <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary" id="custom_btn">
+                    <span><?php echo __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
